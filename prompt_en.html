@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt List</title>
+    <style>
+        .prompt-container {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .prompt-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prompt List</h1>
+    
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>1.Ways to Minimize Hallucination-Context:</span>
+            <button class="copy-button" onclick="copyText('prompt1')">Copy</button>
+        </div>
+        <p id="prompt1">
+            ---------- JOB POSTING ----------
+            This closed posting can be accessed through the following steps:<br>
+            Click on [Recruitment Posting Management] in the POSCO Recruitment Solution.<br>
+            Click on [Closed Recruitment] at the top to view the posting.<br>
+            ※ If you want to repost the closed posting,<br>
+            set [POSCO Posting] to ON in [Posting Settings] and reset the [Posting End Date].<br>
+            ---
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>1.Ways to Minimize Hallucination-Prompt:</span>
+            <button class="copy-button" onclick="copyText('prompt2')">Copy</button>
+        </div>
+        <p id="prompt2">
+            Answer the question based on the data from the Job Posting. <br>
+            Find the most relevant content to the question and quote phrases accurately. <br>
+            Do not generate content that is not included in the Job Posting data. <br>
+            If the question is not relevant to the Job Posting data, respond with "We can't find the related data."<br>
+            Verify if you know the accurate answer to the question or if you have sufficient information to respond.<br>
+            Answer only when you can provide accurate information based on rich data.<br>
+            If you are unsure about the answer, respond with: "We’re sorry, we can’t find the answer."
+        </p>
+    </div>
+
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>1.Ways to Minimize Hallucination-Question:</span>
+            <button class="copy-button" onclick="copyText('prompt3')">Copy</button>
+        </div>
+        <p id="prompt3">
+            How can I access the closed posting?
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>2. Prompt Design Framework</span>
+            <button class="copy-button" onclick="copyText('prompt4')">Copy</button>
+        </div>
+        <p id="prompt4">
+            You are an internal medicine doctor at Seoul National University Hospital!<br>
+            I have hyperlipidemia and hypertension.<br>
+            You need to improve your regular exercise and diet, I don't know what to do with so much information.<br>
+            From an expert's point of view, how to improve your diet, Can you tabulate how to exercise regularly?
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>3.Creating a Report</span>
+            <button class="copy-button" onclick="copyText('prompt5')">Copy</button>
+        </div>
+        <p id="prompt5">
+            Please answer the following five conditions and how to activate intergenerational communication within the department.<br>
+            1. You are an expert in communication within the organization.<br>
+            2. Answer with the highest level of professional in the field of communication in the workplace/organizational culture.<br>
+            3. Information is obtained from 'research institution, administrative agency data, association data, thesis, academic journal, academic journal, publication material, corporate education material, encyclopedia'.
+            4. The answer should be 'bullied'.<br>
+            5. Please write a report on "How to activate intergenerational communication with in the department" to report to the president
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>4.Strategic Analysis-1</span>
+            <button class="copy-button" onclick="copyText('prompt6')">Copy</button>
+        </div>
+        <p id="prompt6">
+            You are a franchise consultant, I am going to open a chicken restaurant in Gangnam-gu, Seoul, there are a lot of floating population and there are many studio apartments where office workers live, Can you use the business model canvas to create a business model?<br>
+            And use the AIDA framework to create advertising phrases for the above business.
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>4.Strategic Analysis-2</span>
+            <button class="copy-button" onclick="copyText('prompt7')">Copy</button>
+        </div>
+        <p id="prompt7">
+            You are a management consultant consulting an electric bicycle manufacturing company.<br>
+            There are a lot of competitors these days, so we need to establish a new strategy, the current economy.<br>
+            Collect situations, battery market trends, leisure sports trends, etc<br>
+            SWOT analysis shows the new strategy of the electric bicycle company.<br>
+            Please set it up
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>5.A survey of data-1</span>
+            <button class="copy-button" onclick="copyText('prompt8')">Copy</button>
+        </div>
+        <p id="prompt8">
+            Find 10 Latest Data On EV Market Outlook
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>5.A survey of data-2</span>
+            <button class="copy-button" onclick="copyText('prompt9')">Copy</button>
+        </div>
+        <p id="prompt9">
+            Please find and summarize 5 papers related to the creativity of the organization and draw implications for POSCO
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>6.Create an idea-1</span>
+            <button class="copy-button" onclick="copyText('prompt10')">Copy</button>
+        </div>
+        <p id="prompt10">
+            I'm going to derive the items I need for a three-day trip to Jeju Island<br>
+            Draw it with a mind map
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>6.Create an idea-2</span>
+            <button class="copy-button" onclick="copyText('prompt11')">Copy</button>
+        </div>
+        <p id="prompt11">
+            Derive the main keywords from the pdf file you just uploaded Draw it with a mind map
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>7.Create an email-1</span>
+            <button class="copy-button" onclick="copyText('prompt12')">Copy</button>
+        </div>
+        <p id="prompt12">
+            I need to write an e-mail to protest against the breach of the delivery contract requirements, Write it in a style that can convince the other company
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>7.Create an email-2</span>
+            <button class="copy-button" onclick="copyText('prompt13')">Copy</button>
+        </div>
+        <p id="prompt13">
+            I need to write an e-mail to the staff about the "Safety Accident Prevention Ideas Discussion" meeting.<br>
+            Please write it in a natural and friendly way
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>7.Create an email-3</span>
+            <button class="copy-button" onclick="copyText('prompt14')">Copy</button>
+        </div>
+        <p id="prompt14">
+            I'm trying to place an order for building materials urgently, politely to the supplier.<br>
+            Please write an e-mail requesting delivery
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>8.PDF Summary</span>
+            <button class="copy-button" onclick="copyText('prompt15')">Copy</button>
+        </div>
+        <p id="prompt15">
+            The attached file is the semi-annual report of POSCO Holdings Company.<br>
+            I am the manager of POSCO Holdings, which establishes management strategies.<br>
+            Read the semi-annual report and discuss key management improvement issues related to our department.<br>
+            Find and summarize. Write it in the table form below.<br><br>
+
+            #Formality<br>
+            -The table consists of five columns.<br>
+            -From column 1, number, title, core content, importance (display by 5-point scale)
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>9.Statistical Analysis</span>
+            <button class="copy-button" onclick="copyText('prompt16')">Copy</button>
+        </div>
+        <p id="prompt16">
+            You are a statistician, please analyze the following data as below<br>
+                - A : 73.4 77.0 73.7 73.3 73.1 71.5 74.5 77.5 76.4 77.7<br>
+                - B : 68.7 71.4 69.8 75.3 71.3 72.7 66.9 70.2 74.4 70.1<br>
+            ① Hypothesis established as follows<br>
+                - H0: There is no difference between the population means of the two groups.<br>
+                - H1: There is a difference in the population mean of the two groups.<br>
+            ② Test whether there is a difference in the population mean between the two groups<br>
+            (significance level 0.05)<br>
+            ③ Draw a box plot comparing the two groups<br>
+            ④ Tell me the statistics and interpret the test results
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>10.Scan Image Analysis</span>
+            <button class="copy-button" onclick="copyText('prompt17')">Copy</button>
+        </div>
+        <p id="prompt17">
+            Please explain the graph above and draw implications
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>11.Scan Image Summary</span>
+            <button class="copy-button" onclick="copyText('prompt18')">Copy</button>
+        </div>
+        <p id="prompt18">
+            Please analyze the uploaded card slip and print it out as below<br>
+            - Make a table and make the column "number", "date", "customer", and "amount"
+        </p>
+    </div>
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>12.Discovery of ideas - 40 principles of invention 40</span>
+            <button class="copy-button" onclick="copyText('prompt19')">Copy</button>
+        </div>
+        <p id="prompt19">
+            You are a TRIZ expert.<br>
+            In order to clean blankets and carpets cleanly with a vacuum cleaner, you need to increase suction power.<br>
+            However, when the suction power is strengthened, the blankets and carpets stick to the vacuum cleaner's inlet and become unusable.<br>
+            Please come up with an idea to solve this problem by applying five optimal principles among the 40 invention principles.<br>
+            Please explain in detail.
+    </div>
+
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>13.Discovery of ideas - Da Vinci Skill (combination method)</span>
+            <button class="copy-button" onclick="copyText('prompt20')">Copy</button>
+        </div>
+        <p id="prompt20">
+            I'm going to make a new kimbap. Please make a new kimbap using the procedure below.<br>
+            (Main ingredients, shape, color, scent, size)<br>
+            1. Derive alternatives by component (5 types)<br>
+            2. Randomly combine alternatives to come up with new gimbap ideas (5 recommendations)<br>
+        </p>
+    </div>
+
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>14.Discovery of ideas - Brainstorm</span>
+            <button class="copy-button" onclick="copyText('prompt21')">Copy</button>
+        </div>
+        <p id="prompt21">
+            This is an apartment construction site.<br>
+            Safety accidents such as jamming, falls, falls, and explosions occur frequently, so you should brainstorm to come up with ideas to prevent safety accidents.<br>
+            Among the three brainstorming participants,<br>
+            A is the type of critical thinking,<br>
+            B is creative thinking,<br>
+            and C is the type that derives ideas from an economic point of view.<br>
+            From the perspective of three people,<br>
+            please come up with three ideas for preventing safety accidents.
+        </p>
+    </div>
+
+
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>15.management science</span>
+            <button class="copy-button" onclick="copyText('prompt22')">Copy</button>
+        </div>
+        <p id="prompt22">
+            It takes 5kg of raw material and 1kw/h of power to make 1kg of product A<br>
+            To make 1kg of product B, 3kg of raw material and 3kw/h of electric power are required.<br>
+            Product A has a profit of 4,000 won per kg and product B has a profit of 7,000 won per kg<br>
+            It happens.<br>
+            How many kilograms should we make for each product at this time?<br>
+            However, the raw material is 21 kg and the power is only 9 kw/h per hour in the entire factory<br>
+            Can't use it. Solve the problem with linear programming<br>
+        </p>
+    </div>
+
+
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>16.Create an image-1</span>
+            <button class="copy-button" onclick="copyText('prompt23')">Copy</button>
+        </div>
+        <p id="prompt23">
+            Draw me a Siamese cat
+        </p>
+    </div>
+
+
+    <div class="prompt-container">
+        <div class="prompt-title">
+            <span>16.Create an image-2</span>
+            <button class="copy-button" onclick="copyText('prompt24')">Copy</button>
+        </div>
+        <p id="prompt24">
+            Please create an image by referring to the contents below<br>
+            - Three 'Posco' employees in suits, meeting in a large windowed conference room<br>
+            - Beyond the window, you can see small mountains and modern buildings, in the conference room there are clocks and laptops, and a frame called 'POSCO' hangs on the wall<br>
+            - Employees are laughing and drinking coffee
+        </p>
+    </div>
+
+
+
+
+
+    <script>
+        function copyText(elementId) {
+            var text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('The text has been copied.');
+            }).catch(err => {
+                alert('Copy failed: ' + err);
+            });
+        }
+    </script>
+</body>
+</html>
